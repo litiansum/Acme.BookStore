@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: |
         dotnet build --configuration Release --no-restore
-        dotnet publish ../../src/Acme.BookStore.HttpApi.Host/Acme.BookStore.HttpApi.Host.csproj  -c Release -o ../Acme-BookStore -r win-x64 --self-contained false
+        dotnet publish src/Acme.BookStore.HttpApi.Host/Acme.BookStore.HttpApi.Host.csproj  -c Release -o ../Acme-BookStore -r win-x64 --self-contained false
       
     - uses: azure/webapps-deploy@v2
       name: Deploy
