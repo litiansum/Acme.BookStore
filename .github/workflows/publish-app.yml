@@ -25,7 +25,7 @@ jobs:
       run: dotnet restore
       
     - name: Build
-      run: 
+      run: |
         dotnet build --configuration Release --no-restore
         dotnet publish ../../src/Acme.BookStore.HttpApi.Host/Acme.BookStore.HttpApi.Host.csproj  -c Release -o ../Acme-BookStore -r win-x64 --self-contained false
       
